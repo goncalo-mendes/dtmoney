@@ -8,7 +8,7 @@ export const Container = styled.div`
   border-spacing: 0 0.5rem;
   
   th{
-    color: var(--text-body);
+    color:${({ theme }) => theme.colors.textBody};
     font-weight: 400;
     padding: 1rem 2rem;
     text-align: left;
@@ -17,20 +17,20 @@ export const Container = styled.div`
   td{
     padding: 1rem 2rem;
     border: 0;
-    background-color: var(--shape);
-    color: var(--text-body);
+    background-color:${({ theme }) => theme.colors.shape};
+    color:${({ theme }) => theme.colors.textBody};
     border-radius: 0.25rem;
 
     &:first-child{
-      color: var(--text-title);
+      color:${({ theme }) => theme.colors.textTitle};
     }
 
     &.deposit{
-      color: var(--green)
+      color:${({ theme }) => theme.colors.green};
     }
 
     &.withdraw{
-      color: var(--red)
+      color:${({ theme }) => theme.colors.red};
     }
   }
 }
